@@ -1,0 +1,45 @@
+{% extends "pythagorasBase.html" %}
+{% block subcontent %}
+    <p>
+        There 
+        {% if numResults == 1 %}
+        is
+        {% else %}
+        are
+        {% endif %}
+        <strong>
+        {% if numResults == 0 %}
+        no
+        {% else %}
+        {{numResults}}
+        {% endif %}
+        </strong> pythagorean 
+        {% if numResults == 1 %}
+        triple
+        {% else %}
+        triples 
+        {% endif %}
+        for the number <strong>{{maxValue}}</strong>.
+    </p>
+    {% if numResults > 0 %}
+    <table id="triplesResults">
+        <thead>
+            <tr>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a, b, c in triples %}
+            <tr>
+                <td>{{ a }}</td>
+                <td>{{ b }}</td>
+                <td>{{ c }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script type="text/javascript" src="scripts/tableSort.js"></script>
+    {% endif %}
+{% endblock %}

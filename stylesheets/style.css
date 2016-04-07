@@ -1,0 +1,88 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+label {
+    vertical-align: top;
+}
+
+input {
+    display: inline;
+    line-height: 1.5;
+}
+
+input[type="submit"] {
+    padding: 1px 15px;
+    border: 1px solid #3776AD;
+    background-color: #59A0DE;
+    color: white;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+#triplesResults th, input[type="submit"] {
+    transition: background 0.25s linear;
+}
+
+#triplesResults th:hover, input[type="submit"]:hover {
+    background-color: #3F84BF;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    border: 1px solid #3776AD;
+    border-bottom: 2px solid #3776AD;
+}
+
+th, td {
+    padding: 2px 10px 2px 10px;
+}
+
+th {
+    background-color: #59A0DE;
+    color: white;
+}
+
+strong {
+    color: #59A0DE;
+}
+
+.inputContainer {
+    display: inline-block;
+}
+
+.inputContainer > input {
+    width: 100%;
+}
+
+.error {
+    color: red;
+    font-size: .75em;
+    margin: 1px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#triplesResults {
+    margin: 30px 0 0 50px;
+}
+
+#form {
+    display: inline-block;
+    margin: 15px 0 0 30px;
+}

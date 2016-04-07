@@ -1,0 +1,16 @@
+{% extends "pythagorasBase.html" %}
+{% block subcontent %}
+    <p>
+        Get all pythagorean triples (a, b, c where a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>).
+    </p>
+    <form id="form" action="/results" onsubmit="validateForm()">
+        <label for="maxValue">Max Value:</label>
+        <div class="inputContainer">
+            <input id="maxValue" type="text" name="maxValue" min="1" required>
+            <p id="errorMaxValue" class="error hidden">Enter an integer greater than 1.</p>
+        </div>
+        {# <br> #}
+        <input type="submit" value="Submit">
+    </form>
+    <script type="text/javascript" src="scripts/validation.js"></script>
+{% endblock %}
